@@ -1,0 +1,17 @@
+{% extends "sms_app/base.html" %}
+
+{% block content %}
+<div class="card">
+    <h2>ID : {{ student.id }}</h2>
+    <h2>{{ student.first_name }}</h2>
+    <h2>{{ student.email }}</h2>
+    <h2>{{ student.gender }}</h2>
+    <h2>{{ student.school }}</h2>
+ </div>
+<ul>
+  {% for s in student.book.all %}
+      <li>{{ s.title }}</li>
+  {% endfor %}
+</ul>
+{% endblock %}
+
